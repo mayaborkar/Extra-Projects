@@ -1,0 +1,91 @@
+import turtle
+
+def writem():
+    maya.left(90)
+    maya.forward(80)
+    maya.right(135)
+    maya.forward(45)
+    maya.left(90)
+    maya.forward(45)
+    maya.right(135)
+    maya.forward(80)
+    maya.left(90)
+    maya.penup()
+    maya.forward(25)
+    maya.pendown()
+
+def writea():
+    maya.left(70)
+    maya.forward(80)
+    maya.right(135)
+    maya.forward(80)
+    maya.left(180)
+    maya.forward(40)
+    maya.left(67)
+    maya.forward(25)
+    maya.penup()
+    maya.left(180)
+    maya.forward(80)
+    maya.right(90)
+    maya.forward(40)
+    maya.left(180)
+    maya.pendown()
+
+def writey():
+    maya.forward(40)
+    maya.left(45)
+    maya.forward(40)
+    maya.left(180)
+    maya.forward(40)
+    maya.left(90)
+    maya.forward(40)
+    maya.penup()
+    maya.right(135)
+    maya.forward(70)
+    maya.left(90)
+    maya.forward(15)
+    maya.pendown()
+
+def writeb():
+    maya.right(90)
+    maya.forward(7)
+    maya.circle(25,190)
+    maya.forward(3)
+    maya.right(180)
+    maya.forward(10)
+    maya.circle(15,190)
+    maya.left(70)
+    maya.forward(80)
+
+def writeo():
+    maya.penup()
+    maya.left(90)
+    maya.forward(70)
+    maya.pendown()
+    maya.circle(25,360)
+
+def writer():
+    maya.forward(15)
+    
+
+wn=turtle.Screen()
+wn.bgcolor("light blue")
+maya=turtle.Turtle()
+maya.color("black")
+maya.pensize(10)
+maya.penup()
+maya.forward(-150)
+maya.pendown()
+
+maya.tracer(3)
+writem()
+writea()
+writey()
+writea()
+maya.penup()
+maya.setpos(-150,-150)
+maya.pendown()
+writeb()
+writeo()
+
+wn.exitonclick()
