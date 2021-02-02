@@ -5,8 +5,7 @@ def play_game(random_x):
     guess_count = 0
     random_number = random.randint(1, random_x)
     your_number = None
-    # print("input value " + str(x))
-    print("random number " + str(random_number))
+    # print("random number " + str(random_number))
     while your_number != random_number:
         your_number = input("Enter a number between 1 and " + str(random_x) + ": ")
         guess_count += 1
@@ -39,6 +38,7 @@ def play_round(random_y, guesses):
         return "Tie"
 
 
+# main()
 difficulty_level = input("Pick difficulty level, choose 1 for Easy, 2 for Medium or 3 for Hard: ")
 if difficulty_level == 1:
     max_random = 10
@@ -60,7 +60,7 @@ while person1_round != 3 and person2_round != 3:
         person1_round += 1
     elif result == "Person2":
         person2_round += 1
-    print(round_count)
+    # print(round_count)
 if person2_round > person1_round:
     print("Person 1 won")
 elif person2_round < person1_round:
