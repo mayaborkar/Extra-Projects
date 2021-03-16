@@ -10,9 +10,9 @@ def mysquareroot(x):
 			return i
 
 
-a = input("a=")
-b = input("b=")
-c = input("c=")
+a = input("a= ")
+b = input("b= ")
+c = input("c= ")
 
 if a == 0:
 	if b == 0:
@@ -20,7 +20,7 @@ if a == 0:
 	else:
 		print ("x = " + str(-c/b))
 else:
-	if (b ** 2 - 4 * a * c) < 0:
+	if ((b ** 2) - (4 * a * c)) < 0:
 		print("that is a complex problem...")
 	else:
 		partroot = b**2-4*a*c
