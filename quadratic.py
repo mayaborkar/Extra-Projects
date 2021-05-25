@@ -2,17 +2,16 @@ import math
 
 
 def mysquareroot(x):
-	y = math.sqrt(x)
-	y = int(math.floor(y))
+	y = int(math.floor(math.sqrt(x)))
 	for i in range(y, 1, -1):
 		z = x % (i*i)
 		if z == 0:
 			return i
 
 
-a = input("a= ")
-b = input("b= ")
-c = input("c= ")
+a = input("a = ")
+b = input("b = ")
+c = input("c = ")
 
 if a == 0:
 	if b == 0:

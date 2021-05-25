@@ -42,7 +42,7 @@ def main():
 
     pygame.display.set_caption("Pong")
     screen = pygame.display.set_mode((width, height))
-    '''
+
     clock = pygame.time.Clock()
 
     font = pygame.font.Font(None, 50)
@@ -56,7 +56,7 @@ def main():
     sub_title = font.render("Click Here to Start", 1, BLACK)
     sub_titlepos = sub_title.get_rect()
     sub_titlepos.center = screen.get_rect().center
-    '''
+
     # paddle variables
     paddle1 = pygame.Surface((p_width, p_height)).convert()
     paddle1.fill(WHITE)
@@ -69,7 +69,7 @@ def main():
     ball_rect = pygame.Rect(width/2 - (ball_width/2), height/2 - (ball_height/2), ball_width, ball_height)
     ball.fill(WHITE)
     ball_speed = [1, 1]
-    '''
+
     beg_time = pygame.time.get_ticks()
     intro = True
     while intro:
@@ -88,8 +88,7 @@ def main():
                 pygame.time.wait(1500)
                 intro = False
         clock.tick(60)
-        pygame.display.flip()
-    '''
+
     play = True
     while play:
         for event in pygame.event.get():
@@ -147,11 +146,10 @@ def main():
 
         screen.fill(BLACK)
         ball_rect = ball_rect.move(ball_speed)
-        print("getting to blit")
         screen.blit(ball, ball_rect)
         screen.blit(paddle1, (p1_x, p1_y))
         screen.blit(paddle2, (p2_x, p2_y))
-        print("play game")
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
