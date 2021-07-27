@@ -64,8 +64,10 @@ def is_winner(t_array):
 
 
 def play_computer(v_array):
-    block_required = block(v_array)
-    if not block_required:
+    best_choice = block(v_array, 20)
+    if not best_choice:
+        best_choice = block(v_array, 2)
+    if not best_choice:
         # look for all empty cells
         # logic
         if v_array[1][1] == 0:
@@ -88,17 +90,17 @@ def play_computer(v_array):
             # Is empty
             # return selection
     else:
-        return block_required
+        return best_choice
 
 
-def block(v_array):
+def block(v_array, check_count):
     cell_pos = []
-    # chekcing rows
+    # checking rows
     for i in range(0, 3):
         total = 0
         for j in range(0, 3):
             total = total + v_array[i][j]
-        if total == 2:
+        if total == check_count:
             for k in range(0, 3):
                 if v_array[i][k] == 0:
                     cell_pos = [i, k]
@@ -109,30 +111,31 @@ def block(v_array):
             total = 0
             for j in range(0, 3):
                 total = total + v_array[j][i]
-            if total == 2:
+            if total == check_count:
                 for k in range(0, 3):
                     if v_array[k][i] == 0:
                         cell_pos = [k, i]
                         break
     # checking diagonals
     if not cell_pos:
-        if v_array[0][0] + v_array[1][1] + v_array[2][2] == 2:
-            for i in range(0, 3):
-                for k in range(0, 3):
-                    if v_array[k][i] == 0:
-                        cell_pos = [k, i]
-                        break
-        if v_array[2][0] + v_array[1][1] + v_array[0][2] == 2:
-            total = 0
-            for j in range(0, 3):
-                total = total + v_array[i][j]
-            if total == 2:
-                for k in range(0, 3):
-                    if v_array[k][i] == 0:
-                        cell_pos = [k, i]
-                        break
+        if v_array[0][0] + v_array[1][1] + v_array[2][2] == check_count:
+            if v_array[0][0] == 0:
+                cell_pos = [0, 0]
+            elif v_array[1][1] == 0:
+                cell_pos = [1, 1]
+            elif v_array[2][2] == 0:
+                cell_pos = [2, 2]
+
+        if v_array[2][0] + v_array[1][1] + v_array[0][2] == check_count:
+            if v_array[2][0] == 0:
+                cell_pos = [2, 0]
+            elif v_array[1][1] == 0:
+                cell_pos = [1, 1]
+            elif v_array[0][2] == 0:
+                cell_pos = [0, 2]
     print(cell_pos)
     return cell_pos
+
 
 
 # position array
