@@ -117,10 +117,7 @@ def block(v_array):
     # checking diagonals
     if not cell_pos:
         if v_array[0][0] + v_array[1][1] + v_array[2][2] == 2:
-            total = 0
-            for j in range(0, 3):
-                total = total + v_array[i][j]
-            if total == 2:
+            for i in range(0, 3):
                 for k in range(0, 3):
                     if v_array[k][i] == 0:
                         cell_pos = [k, i]
