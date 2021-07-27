@@ -37,8 +37,6 @@ print(column)
 '''
 create 2 arrays one with first row of the board and the notes board only the first row remove the 4 from the notes board
 '''
-for i in range(0, 4):
-    for j in range(0, 4):
 
 
 
