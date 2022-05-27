@@ -1,3 +1,13 @@
+def iswin(board):
+    sumCol = 0
+    for i in range(0, board.length):
+        for j in range(0, board[i].length):
+            sumCol += board[i][j]
+        if sumCol == 45:
+            return True
+    return False
+
+
 board = [4, 0, 0, 0], [0, 0, 2, 4], [1, 0, 4, 2], [0, 4, 3, 0]
 
 notes_board = [4, 0, 0, 0], [0, 0, 2, 4], [1, 0, 4, 2], [0, 4, 3, 0]

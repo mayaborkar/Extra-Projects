@@ -9,6 +9,6 @@ while counter < len(palindromestr)/2:
         ispalindrome = "No"
         break
 if ispalindrome == "yes":
-    print "Yes, it is a palindrome"
+    print("Yes, it is a palindrome")
 else:
-    print "No, it is not a palindrome"
+    print("No, it is not a palindrome")

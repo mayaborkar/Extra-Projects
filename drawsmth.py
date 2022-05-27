@@ -1,6 +1,7 @@
 import turtle
 import os
 
+
 def drawsun():
     s = turtle.Turtle()
     # MAIN OBJECT DRAWN USING A TURTLE
@@ -35,7 +36,8 @@ def drawsun():
         s.color("yellow")
         s.forward(100)
 
-def drawwave(x,y,color):
+
+def drawwave(x, y, color):
     waves = turtle.Turtle()
     # USES TRACER
     waves.tracer(7)
@@ -53,12 +55,14 @@ def drawwave(x,y,color):
         waves.left(50)
         waves.forward(10)
 
+
 def drawwaves():
     DARK_BLUE = (72, 206, 219)
     drawwave(-350,0,DARK_BLUE)
     drawwave(-350,-100,DARK_BLUE)
     drawwave(-350, -200, DARK_BLUE)
     drawwave(-350, -300, DARK_BLUE)
+
 
 # main function starts here
 wn = turtle.Screen()
