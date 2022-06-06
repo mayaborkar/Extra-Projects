@@ -31,3 +31,8 @@ while play:
         print("The computer picked: " + computerchoice)
         print("Computer won! ")
         play = False
+    askPlay = input("Would you like to play again? (Y/N) ")
+    if askPlay == "Y":
+        play = True
+    else:
+        play = False
