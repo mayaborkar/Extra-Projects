@@ -33,6 +33,6 @@ play = "Y"
 # playing again function
 while play == 'Y':
     play_game()
-    play = raw_input("Would you like to play again Y/N: ")
+    play = input("Would you like to play again Y/N: ")
 # Done with playing
 print("Thank you for playing!")

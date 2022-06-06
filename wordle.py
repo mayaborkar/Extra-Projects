@@ -12,10 +12,10 @@ def getHint(yourWord):
         letter = yourWord[i]
         for j in range(0, len(hiddenWord)):
             currentLetter = hiddenWord[j]
-            #print (letter)
-            #print (currentLetter)
+            print (letter)
+            print (currentLetter)
             if(letter == currentLetter):
-                print ('is equal')
+                print('is equal')
                 if(i != j):
                     newString += "+"
                     # yourWord.replace(yourWord[j], "+")
@@ -24,8 +24,9 @@ def getHint(yourWord):
                     newString += "*"
                     # yourWord.replace(yourWord[j], "*")
                     print('is equal 2')
-                newString += yourWord[j]
-    print (newString)
+        if newString[i] != "+" and newString[i] != "+":
+            newString += yourWord[i]
+    print(newString)
     return newString
 
 
