@@ -9,4 +9,3 @@ labels = ['hello', 'thanks', 'yes', 'no', 'iloveyou']
 number_imgs = 15
 
 for label in labels:
-    
