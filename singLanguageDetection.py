@@ -25,5 +25,6 @@ for label in labels:
 
     cap.release()
 
-# have captured images and saved
-# next is to label
+# have captured images and saved --> done
+# next is to label --> done
+
